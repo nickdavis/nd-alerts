@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "NickDavis\Alerts\\": "includes/classes/"
+      "NickDavis\\Alerts\\": "includes/classes/"
     }
   },
   "require-dev": {
