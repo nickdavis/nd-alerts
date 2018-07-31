@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: NickDavis\Alerts
+ * Plugin Name: ND Alerts
  * Plugin URI:
  * Description:
  * Version:     0.1.0

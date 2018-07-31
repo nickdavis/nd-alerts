@@ -1,5 +1,5 @@
-=== Nd Alerts ===
-Contributors:      10up
+=== ND Alerts ===
+Contributors:      nickdavis
 Tags: 
 Requires at least: 4.9
 Tested up to:      4.9
@@ -16,7 +16,7 @@ A brief description of the plugin.
 = Manual Installation =
 
 1. Upload the entire `/nd-alerts` directory to the `/wp-content/plugins/` directory.
-2. Activate Nd Alerts through the 'Plugins' menu in WordPress.
+2. Activate ND Alerts through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
 
