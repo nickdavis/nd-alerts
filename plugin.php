@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: NdAlerts
+ * Plugin Name: NickDavis\Alerts
  * Plugin URI:
  * Description:
  * Version:     0.1.0
@@ -23,8 +23,8 @@ require_once ND_ALERTS_INC . 'functions/core.php';
 
 
 // Activation/Deactivation
-register_activation_hook( __FILE__, '\NdAlerts\Core\activate' );
-register_deactivation_hook( __FILE__, '\NdAlerts\Core\deactivate' );
+register_activation_hook( __FILE__, '\NickDavis\Alerts\Core\activate' );
+register_deactivation_hook( __FILE__, '\NickDavis\Alerts\Core\deactivate' );
 
 // Bootstrap
-NdAlerts\Core\setup();
+NickDavis\Alerts\Core\setup();

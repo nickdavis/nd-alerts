@@ -1,6 +1,6 @@
 <?php
 
-namespace NdAlerts;
+namespace NickDavis\Alerts;
 
 use PHPUnit_Framework_TestResult;
 use Text_Template;

@@ -1,5 +1,5 @@
 <?php
-namespace NdAlerts\Core;
+namespace NickDavis\Alerts\Core;
 
 /**
  * This is a very basic test case to get things started. You should probably rename this and make
@@ -13,7 +13,7 @@ namespace NdAlerts\Core;
  *   - https://github.com/10up/wp_mock
  */
 
-use NdAlerts as Base;
+use NickDavis\Alerts as Base;
 
 class Core_Tests extends Base\TestCase {
 
@@ -26,8 +26,8 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'init', 'NdAlerts\Core\i18n' );
-		\WP_Mock::expectActionAdded( 'init', 'NdAlerts\Core\init' );
+		\WP_Mock::expectActionAdded( 'init', 'NickDavis\Alerts\Core\i18n' );
+		\WP_Mock::expectActionAdded( 'init', 'NickDavis\Alerts\Core\init' );
 		\WP_Mock::expectAction( 'nd_alerts_loaded' );
 
 		// Act
