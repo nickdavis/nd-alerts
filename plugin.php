@@ -18,6 +18,12 @@ define( 'ND_ALERTS_URL', plugin_dir_url( __FILE__ ) );
 define( 'ND_ALERTS_PATH', dirname( __FILE__ ) . '/' );
 define( 'ND_ALERTS_INC', ND_ALERTS_PATH . 'includes/' );
 
+// Autoload
+$autoloader = __DIR__ . '/vendor/autoload.php';
+if ( is_readable( $autoloader ) ) {
+	require_once $autoloader;
+}
+
 // Include files
 require_once ND_ALERTS_INC . 'functions/core.php';
 
