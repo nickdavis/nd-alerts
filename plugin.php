@@ -2,10 +2,10 @@
 /**
  * Plugin Name: ND Alerts
  * Plugin URI:
- * Description:
+ * Description: WordPress plugin to manage and deliver alert messages to the front end a website. Requires developer setup.
  * Version:     0.1.0
- * Author:      10up
- * Author URI:  https://10up.com
+ * Author:      Nick Davis
+ * Author URI:  http://nickdavis.co
  * Text Domain: nd-alerts
  * Domain Path: /languages
  *
