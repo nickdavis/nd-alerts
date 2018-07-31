@@ -15,28 +15,29 @@ use BrightNucleus\Views;
 use WP_Query;
 
 class Alert {
-	// Register CPT
 	public function register() {
-		add_action( 'init', function () {
-			register_extended_post_type( 'nd-alert',
-				[
-					'publicly_queryable' => false,
-					'supports'           => [
-						'title',
-						'editor'
-					],
-					'menu_icon'          => 'dashicons-megaphone',
-				],
-				[
-					// Overrides the base names used for labels.
-					'singular' => 'Alert',
-					'plural'   => 'Alerts',
-					'slug'     => 'alerts',
-				]
-			);
-		} );
+		add_action( 'init', [ $this, 'register_cpt' ], 11 );
 
 		add_action( 'nd_alerts', [ $this, 'render' ] );
+	}
+
+	public function register_cpt() {
+		register_extended_post_type( 'nd-alert',
+			[
+				'publicly_queryable' => false,
+				'supports'           => [
+					'title',
+					'editor'
+				],
+				'menu_icon'          => 'dashicons-megaphone',
+			],
+			[
+				// Overrides the base names used for labels.
+				'singular' => 'Alert',
+				'plural'   => 'Alerts',
+				'slug'     => 'alerts',
+			]
+		);
 	}
 
 	public function render() {
