@@ -1,10 +1,10 @@
 {
-  "name": "10up/nd-alerts",
-  "description": "Nd Alerts",
+  "name": "nickdavis/nd-alerts",
+  "description": "WordPress plugin to manage alerts messages delivered in a 'Hello Bar' style. Requires developer setup.",
   "authors": [
     {
-      "name": "Author",
-      "email": "info@10up.com"
+      "name": "Nick Davis",
+      "email": "inbox@nickdavis.co"
     }
   ],
   "require": {
