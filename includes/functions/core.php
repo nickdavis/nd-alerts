@@ -6,6 +6,7 @@
  */
 
 namespace NickDavis\Alerts\Core;
+use NickDavis\Alerts\Alert;
 use \WP_Error as WP_Error;
 
 /**
@@ -49,6 +50,8 @@ function i18n() {
  */
 function init() {
 	do_action( 'nd_alerts_init' );
+
+	( new Alert )->register();
 }
 
 /**
