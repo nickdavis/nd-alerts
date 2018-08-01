@@ -1,6 +1,7 @@
 {
   "name": "nickdavis/nd-alerts",
   "description": "WordPress plugin to manage and deliver alert messages to the front end a website. Requires developer setup.",
+  "type": "wordpress-plugin",
   "authors": [
     {
       "name": "Nick Davis",
