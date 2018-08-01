@@ -1,13 +1,9 @@
-import Cookies from 'js-cookie';
-
-
-// import foo from './components/bar';
 
 // import * as Cookies from 'js-cookie';
 
 //import Cookies from '../../../node_modules/js-cookie/src/js.cookie.js';
 
-//console.log( 'alert.js outside jQuery' );
+console.log( 'alert.js outside jQuery' );
 
 document.body.classList.add( 'alert--on' );
 

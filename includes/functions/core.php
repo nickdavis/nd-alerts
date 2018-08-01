@@ -6,8 +6,11 @@
  */
 
 namespace NickDavis\Alerts\Core;
+use BrightNucleus\Views;
+use BrightNucleus\View\Location\FilesystemLocation;
 use NickDavis\Alerts\Alert;
 use \WP_Error as WP_Error;
+
 
 /**
  * Default setup routine
@@ -52,6 +55,7 @@ function init() {
 	do_action( 'nd_alerts_init' );
 
 	( new Alert )->register();
+	register_views();
 }
 
 /**
@@ -142,9 +146,17 @@ function scripts() {
 	);
 
 	wp_enqueue_script(
-		'nd_alerts_frontend',
+		'nd_alerts_cookie',
 		script_url( 'frontend', 'frontend' ),
 		[],
+		ND_ALERTS_VERSION,
+		true
+	);
+
+	wp_enqueue_script(
+		'nd_alerts_frontend',
+		script_url( 'frontend', 'frontend' ),
+		[ 'nd_alerts_cookie' ],
 		ND_ALERTS_VERSION,
 		true
 	);
@@ -248,4 +260,16 @@ function mce_css( $stylesheets ) {
 	return $stylesheets . ND_ALERTS_URL . ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
 			'assets/css/frontend/editor-style.css' :
 			'dist/css/editor-style.min.css' );
+}
+
+function register_views() {
+	$folders = [
+		get_stylesheet_directory() . '/templates',
+		get_template_directory() . '/templates',
+		ND_ALERTS_PATH . 'templates',
+	];
+
+	foreach ($folders as $folder) {
+		Views::addLocation(new FilesystemLocation($folder));
+	}
 }

@@ -66,6 +66,7 @@
     "node": "~8.11"
   },
   "dependencies": {
+    "js-cookie": "^2.2.0",
     "normalize.css": "^8.0.0"
   }
 }
