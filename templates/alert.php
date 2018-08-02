@@ -5,8 +5,8 @@
 			<?= $this->title && $this->text ? ' – ' : ''; ?>
 			<?= $this->text ? wp_kses_post( $this->text ) : ''; ?>
         </p>
-        <a href="#" class="nd-alerts__close"><img
+        <button class="nd-alerts__close"><img
                     src="<?php echo CHILD_THEME_URI; ?>/assets/images/icons/close_white.min.svg"
-                    alt="Close Alert"></a>
+                    alt="Close Alert"></button>
     </div>
 </div>
