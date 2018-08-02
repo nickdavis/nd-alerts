@@ -9,7 +9,9 @@ function alertClose() {
 }
 
 // Adds a click listener to the close button.
-closeButtons[ 0 ].addEventListener( 'click', alertClose );
+if ( closeButtons[ 0 ] !== undefined ) {
+	closeButtons[ 0 ].addEventListener( 'click', alertClose );
+}
 
 // If the cookie is set, hide the alert box.
 if ( cookieValue === 'hide' ) {
